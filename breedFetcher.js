@@ -11,7 +11,7 @@ const fetchBreedDescription = (breedName, callback) => {
     err = `The breed you have searched for does not exist.`;
     return callback(err, null);
     } else {
-    return callback(null, data[0].description);
+    return callback(null, data[0].description.trim());
     }
   });
 };
